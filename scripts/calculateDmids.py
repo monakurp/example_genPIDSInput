@@ -41,7 +41,7 @@ for b in range(nbin[0]):
   vhilim[b] = np.pi / 6.0 * (reglim[0] * ratio_d**(float(b+1) / nbin[0]))**3
   dmid[b] = np.sqrt((6.0 * vhilim[b] / np.pi)**(1.0 / 3.0) * (6.0 * vlolim[b] / np.pi)**(1.0 / 3.0))
 
-# Subrange 1:
+# Subrange 2:
 ratio_d = reglim[2] / reglim[1]
 for b in np.arange(nbin[0], nbins, 1):
   c = b-nbin[0]
