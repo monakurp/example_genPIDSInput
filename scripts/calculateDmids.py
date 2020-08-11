@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import sys
-import argparse
 import numpy as np
 import os
 
@@ -17,18 +16,12 @@ University of Helsinki
 #==========================================================#
 # Input arguments:
 
-parser = argparse.ArgumentParser(prog='genPIDSInput.py')
-parser.add_argument("-nb","--nbin", help="Number of size bins in the subrange 1 and 2.",\
-  type=int, nargs=2)
-parser.add_argument("-rl","--reglim", help=" Min & max diameters of subranges.",\
-  type=float, nargs=3)
-args = parser.parse_args()
+# Number of size bins in the subrange 1 and 2:
+nbin = [2, 8]
 
-#==========================================================#
-# Rename:
+# Min & max diameters of subranges
+reglim = [3.0E-9, 10.0E-9, 1.0E-6]
 
-nbin = args.nbin
-reglim = args.reglim
 nbins = np.sum(nbin)
 
 #==========================================================#
